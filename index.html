@@ -11,186 +11,11 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-  <style>
-    body {
-      margin: 0;
-    }
-
-    .dashboard-shop-image {
-      position: relative;
-      width: 10vw;
-      height: 10vw;
-      overflow: hidden;
-      border-radius: 50%;
-      margin-left: 21%;
-    }
-
-    .dashboard-shop-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      width: 25%;
-      background-color: #f1f1f1;
-      position: fixed;
-      height: 100%;
-      overflow: auto;
-    }
-
-    li a {
-      display: block;
-      color: #000;
-      padding: 8px 16px;
-      text-decoration: none;
-    }
-
-    li a.active {
-      background-color: yellow;
-    }
-
-    .nav-item {
-      margin-top: 5%;
-    }
-
-    li a:hover:not(.active) {
-      background-color: #555;
-      color: white;
-    }
-
-    .dashboard-item-list {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      background: #FFB800;
-    }
-
-    .dashboard-item-list-box {
-      margin: 7%;
-      width: 200px;
-      height: 100px;
-      background-color: white;
-      text-align: center;
-      padding: 1.5%;
-    }
-
-    .dashboard-stats-graphs {
-      margin-top: -5%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .dashboard-sales-graph1 {
-      background-color: purple;
-      width: 676px;
-      height: 408px;
-      border-radius: 20px;
-      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
-
-    }
-
-    .dashboard-sales-graph2 {
-      background-color: purple;
-      width: 385px;
-      height: 408px;
-      border-radius: 20px;
-      box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.459);
-    }
-
-    #curve_chart {
-      /* margin: 5%; */
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
-
-    }
-
-    #chart_div {
-      width: 100%;
-      height: 100%;
-      border-radius: 20px;
-      box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.459);
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script type="text/javascript">
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
+  <script type="text/javascript" src="./script.js">
 
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ['Year', 'Sales', 'Expenses'],
-        ['2004', 1000, 400],
-        ['2005', 1170, 460],
-        ['2006', 660, 1120],
-        ['2007', 1030, 540]
-      ]);
-
-      var options = {
-        title: 'Company Performance',
-        curveType: 'function',
-        legend: { position: 'bottom' }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-
-      chart.draw(data, options);
-
-
-    }
-    google.charts.load('current', { packages: ['corechart', 'bar'] });
-    google.charts.setOnLoadCallback(drawTrendlines);
-
-    function drawTrendlines() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('timeofday', 'Time of Day');
-      data.addColumn('number', 'Motivation Level');
-      data.addColumn('number', 'Energy Level');
-
-      data.addRows([
-        [{ v: [8, 0, 0], f: '8 am' }, 1, .25],
-        [{ v: [9, 0, 0], f: '9 am' }, 2, .5],
-        [{ v: [10, 0, 0], f: '10 am' }, 3, 1],
-        [{ v: [11, 0, 0], f: '11 am' }, 4, 2.25],
-        [{ v: [12, 0, 0], f: '12 pm' }, 5, 2.25],
-        [{ v: [13, 0, 0], f: '1 pm' }, 6, 3],
-        [{ v: [14, 0, 0], f: '2 pm' }, 7, 4],
-        [{ v: [15, 0, 0], f: '3 pm' }, 8, 5.25],
-        [{ v: [16, 0, 0], f: '4 pm' }, 9, 7.5],
-        [{ v: [17, 0, 0], f: '5 pm' }, 10, 10],
-      ]);
-
-      var options = {
-        title: 'Motivation and Energy Level Throughout the Day',
-        trendlines: {
-          0: { type: 'linear', lineWidth: 5, opacity: .3 },
-          1: { type: 'exponential', lineWidth: 10, opacity: .3 }
-        },
-        hAxis: {
-          title: 'Time of Day',
-          format: 'h:mm a',
-          viewWindow: {
-            min: [7, 30, 0],
-            max: [17, 30, 0]
-          }
-        },
-        vAxis: {
-          title: 'Rating (scale of 1-10)'
-        }
-      };
-
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
   </script>
 </head>
 
@@ -199,27 +24,44 @@
   <ul class="nav flex-column">
     <li class="nav-item">
       <div class="dashboard-shop-image">
-        <img src="download.jfif" class="img-fluid rounded-circle">
+        <img src="download.jfif" class="img-fluid rounded">
+        <!-- <div class="fs-4 text-center text-dark">New Ramesh store</div> -->
+
       </div>
     </li>
     <li class="nav-item">
-      <div class="fs-4 text-center text-dark">New Ramesh store</div>
     </li>
     <li class="nav-item">
       <a class="nav-link fs-6 active" aria-current="page" href="#">Dashboard</a>
     </li>
     <li class="nav-item">
+      <a class="nav-link fs-6" href="#">Analytics</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fs-6" href="#">Orders</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link fs-6" href="#">Products</a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link fs-6" href="#">Profile</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link fs-6" href="#">Maps</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link fs-6" href="#">Shop Items</a>
-    </li>
   </ul>
-
-  <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+  <div class="dashboard-mobile-buttons">
+    <div class="d-flex bd-highlight mb-3">
+      <div class="me-auto p-2 bd-highlight">
+        <div class="dashboard-shop-image">
+          <img src="download.jfif" class="img-fluid rounded">
+        </div>
+      </div>
+      <div class="p-2 bd-highlight">
+        <div class="shop-status">
+          <img src="./power-on.png" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dashboard-full-box">
     <div class="dashboard-item-list">
       <div class="dashboard-item-list-box">
         <div class="fs-5 dashboard-item-text">Total Items</div>
@@ -240,41 +82,173 @@
         </div>
       </div>
     </div>
-
-    <div class="dashboard-stats-graphs">
-      <div class="dashboard-sales-graph1">
-        <div id="curve_chart"></div>
-      </div>
-      <div class="dashboard-sales-graph2">
+    <div class="dashboard-graphs-container-pc">
+      <div id="dashboard-graph1">
         <div id="chart_div"></div>
 
       </div>
+      <div id="dashboard-graph2">
+        <div id="curve_chart"></div>
+
+      </div>
+      <div id="dashboard-graph3">
+        <div id="dashboard-graph3-1">
+        </div>
+        <div id="dashboard-graph3-2">
+        </div>
+      </div>
     </div>
-    <div class="dashboard-page-views" style="margin: 5%;">
-      <div class="fs-3">Page Views</div>
+
+    <div class="dashboard-graphs-container-mobile">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="dashboard-mobile-graph1">
+              <div id="chart_div1"></div>
+
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dashboard-mobile-graph2">
+              <div id="curve_chart1"></div>
+
+            </div>
+          </div>
+
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="dashboard-page-views">
       <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Item View</th>
-            <th scope="col">Unique Visitors</th>
-            <th scope="col">Age-group</th>
-          </tr>
-        </thead>
         <tbody>
           <tr>
-            <td>Shirt</td>
-            <td>100</td>
-            <td>10-20</td>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
           </tr>
           <tr>
-            <td>Jacket</td>
-            <td>100</td>
-            <td>10-20</td>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
           </tr>
           <tr>
-            <td>Hoodie</td>
-            <td>100</td>
-            <td>10-20</td>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
+          </tr>
+          <tr>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
+          </tr>
+          <tr>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
+          </tr>
+          <tr>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
+          </tr>
+          <tr>
+            <td class="data1">
+              <div class="table-product-image"></div>
+              <div class="product-name">Name</div>
+            </td>
+            <td>order id</td>
+            <td>
+            <td class="table-action-select"><select class="form-select" aria-label="Default select example">
+                <option selected>action</option>
+                <option value="1">pending</option>
+                <option value="2">inprocess</option>
+                <option value="3">delivered</option>
+                <option value="4">pickup pending</option>
+              </select></td>
+            </td>
+            <td class="table-dots">...</td>
           </tr>
         </tbody>
       </table>
