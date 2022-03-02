@@ -183,13 +183,13 @@ tr {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 }
-.data1{
+.data1 {
   display: inline-flex;
 }
-.product-name{
+.product-name {
   margin-left: 15px;
 }
-.table-action-select{
+.table-action-select {
   width: 123px;
 }
 .table-product-image {
@@ -199,9 +199,24 @@ tr {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 }
+footer{
+  display: none;
+}
 
 @media screen and (max-width: 800px) {
-  .table-dots{
+  .table-dots {
     display: none;
   }
+  footer {
+    display: block;
+    background-color: #fff;
+    border-radius: 13px;
+    padding: 5%;
+  }
+  .footer-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
+
