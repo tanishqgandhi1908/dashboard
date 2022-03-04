@@ -166,6 +166,9 @@ li a:hover:not(.active) {
     width: 40px;
     height: 40px;
   }
+  .currentpage{
+    background-color: rgb(133, 133, 133);
+  }
 }
 
 .dashboard-page-views {
@@ -200,9 +203,7 @@ tbody tr {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 }
-.viewmorebutton {
-  margin-right: 5%;
-}
+
 footer {
   display: none;
 }
