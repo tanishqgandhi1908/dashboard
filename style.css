@@ -182,6 +182,9 @@ li a:hover:not(.active) {
   margin: 5%;
   width: 90%;
 }
+.table > :not(caption) > * > * {
+  border-bottom-width: 0px;
+}
 tbody tr {
   background: #ebebeb;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -433,5 +436,36 @@ footer {
   .addproductsform {
     margin: 8%;
     width: auto;
+  }
+}
+
+/*orders page */
+.orders-page-container {
+  margin-left: 23%;
+  margin-top: 5%;
+  max-width: 72%;
+  background: #ffffff;
+  border-radius: 13px;
+}
+
+.action-button-css {
+  background: #c4c4c4;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  background-image: url(./dropdown.svg);
+  background-position: calc(100% - 20px) 10px, calc(100% - 20px) 10px, 100% 0;
+  background-size: 15px 15px, 15px 15px;
+  background-repeat: no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.orders-text{
+  margin-top: 5%;
+  margin-left: 20px;
+}
+@media screen and (max-width: 800px) {
+  .orders-page-container {
+    margin-left: 5%;
+    max-width: 100%;
   }
 }
