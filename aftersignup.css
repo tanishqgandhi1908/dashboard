@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    background: #e5e5e5;
+}
+.after-signup-header-mobile{
+    height: 50px;
+    background-color: #ffc107;
+}
+
+.after-signup-container-mobile{
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    /* height: auto; */
+    /* width: 100%; */
+
+    margin: 5%;
+}
+.after-signup-options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 5%;
+}
+#aftersignupcards{
+    margin-top: 10%;
+}
+.card-header-css{
+    display: flex;
+    flex-direction: row;
+}
+.number-design{
+    font-size: 0.75rem;
+    border-radius: 50%;
+    border: 1px solid rgb(180, 180, 180);
+    width: 20px;
+    height: 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+
+}
+.header-text{
+    margin-left: 10px;
+}
+.confirm-button-signup{
+    margin: 5%;
+    width: 50vw;
+}
+.back-image img{
+    margin-right: 20%;
+}
+.after-signup-buisness-detail{
+    margin: 5%;
+}
+
+/*personal details page*/
+.personal-details-container{
+    margin: 5%;
+}
+
+.proof-instructions{
+    background-color: #fff;
+    margin: 5%;
+    padding: 2%;
+}
+.proof-of-indentity{
+    margin: 5%;
+}
