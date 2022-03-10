@@ -20,25 +20,58 @@
         <div class="back-image fs-3"><a href="./aftersignup.html"><img src="./images/back.png" width="20"></a>Document
             Proof</div>
     </div>
-    <div class="proof-instructions">
-        <ol>
-            <li>Please upload original document only</li>
-            <li>Photocopy & expired document are not accepted</li>
-            <li>Photo should be clear & in full</li>
-        </ol>
-    </div>
-    <div class="proof-of-indentity">
-        <select class="form-select" aria-label="proof of indentity">
-            <option selected>proof of indentity*</option>
-            <option value="1">Adhar Card</option>
-            <option value="2">Voter ID</option>
-            <option value="3">Driving License </option>
-            <option value="4">Passport</option>
+    <div class="document-proof-container">
+        <div class="proof-instructions">
+            <ol>
+                <li>Please upload original document only</li>
+                <li>Photocopy & expired document are not accepted</li>
+                <li>Photo should be clear & in full</li>
+            </ol>
+        </div>
+        <div class="proof-of-indentity">
+            <select class="form-select" aria-label="proof of indentity">
+                <option selected>proof of indentity*</option>
+                <option value="1">Adhar Card</option>
+                <option value="2">Voter ID</option>
+                <option value="3">Driving License </option>
+                <option value="4">Passport</option>
 
-        </select>
-    </div>
+            </select>
+        </div>
 
-    <div class="proof-of-buisness"></div>
+        <div class="proof-of-buisness">
+            <div class="header-text">Document Proof</span></div><br>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Food Licenses: FSSAI / APMC </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                    Others / Distributors bill </label>
+            </div>
+        </div>
+
+        <div class="Pan-Card-details">
+            <div class="header-text">Pan Card Photos</span></div><br>
+            <div class="upload-pan-card-container">
+                <div class="camera-upload">
+                    <input type="file" id="camera-upload-css" hidden />
+                    <label for="camera-upload-css" class="camera-upload-css">Camera</label>
+                </div>
+                <div class="image-upload">
+                    <input type="file" id="image-upload-css" hidden />
+                    <label for="image-upload-css" class="image-upload-css">Image</label>
+
+                </div>
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-warning confirm-button-signup">Confirm</button>
+        
+    </div>
 </body>
 
 </html>

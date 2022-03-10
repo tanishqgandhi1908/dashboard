@@ -1,72 +1,158 @@
-body{
-    margin: 0;
-    background: #e5e5e5;
+body {
+  margin: 0;
+  background: #e5e5e5;
 }
-.after-signup-header-mobile{
-    height: 50px;
-    background-color: #ffc107;
+.after-signup-header-mobile {
+  height: 50px;
+  background-color: #ffc107;
 }
-
-.after-signup-container-mobile{
+.after-signup-container-mobile {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+  .after-signup-container-mobile {
     background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     /* height: auto; */
-    /* width: 100%; */
+    width: auto;
 
     margin: 5%;
+  }
 }
-.after-signup-options{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    margin: 5%;
+.after-signup-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 5%;
 }
-#aftersignupcards{
-    margin-top: 10%;
+#aftersignupcards {
+  margin-top: 10%;
 }
-.card-header-css{
-    display: flex;
-    flex-direction: row;
+.card-header-css {
+  display: flex;
+  flex-direction: row;
 }
-.number-design{
-    font-size: 0.75rem;
-    border-radius: 50%;
-    border: 1px solid rgb(180, 180, 180);
-    width: 20px;
-    height: 20px;
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    justify-content: center;
-
+.number-design {
+  font-size: 0.75rem;
+  border-radius: 50%;
+  border: 1px solid rgb(180, 180, 180);
+  width: 20px;
+  height: 20px;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
 }
-.header-text{
-    margin-left: 10px;
+.header-text {
+  margin-left: 10px;
 }
-.confirm-button-signup{
+#confirm-button-signup {
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+  #confirm-button-signup {
     margin: 5%;
     width: 50vw;
+  }
 }
-.back-image img{
-    margin-right: 20%;
+
+.back-image img {
+  margin-right: 20%;
 }
-.after-signup-buisness-detail{
-    margin: 5%;
+.after-signup-buisness-detail-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+  .after-signup-buisness-detail-container {
+    width: 100%;
+  }
+}
+.after-signup-buisness-detail {
+  margin: 5%;
 }
 
 /*personal details page*/
-.personal-details-container{
-    margin: 5%;
+
+.personal-details-container {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+  .personal-details-container {
+    width: 90%;
+  }
+}
+/* document upload contaier */
+.document-proof-container{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media screen and (max-width: 800px) {
+    .document-proof-container{
+    width: 100%;
+    }
+}
+.proof-instructions {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 5%;
+  padding: 2%;
+}
+.proof-of-indentity {
+  margin: 5%;
+}
+.proof-of-buisness{
+ background-color: #fff;
+ border-radius: 5px;
+
+ margin: 5%;
+ padding: 2%;   
 }
 
-.proof-instructions{
+.Pan-Card-details{
     background-color: #fff;
-    margin: 5%;
-    padding: 2%;
+ border-radius: 5px;
+
+ margin: 5%;
+ padding: 2%;   
 }
-.proof-of-indentity{
-    margin: 5%;
+
+.upload-pan-card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
+.camera-upload{
+    width: 100px;
+    height: 100px;
+}
+.image-upload{
+    width: 100px;
+    height: 100px;
+}
+.camera-upload-css,
+.image-upload-css{
+    display: inline-block;
+    background-color: #ffc107;
+    padding: 0.5rem;
+    font-family: sans-serif;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+  }
