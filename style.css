@@ -524,20 +524,20 @@ footer {
   background: #c4c4c4;
   border-radius: 6px;
 }
-.graphs-filters{
+.graphs-filters {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin: 5%;
 }
-.button-graph-filters{
+.button-graph-filters {
   width: 70px;
   margin: 5%;
-height: 30px;
-background: #979797;
-border-radius: 4px;
+  height: 30px;
+  background: #979797;
+  border-radius: 4px;
 }
-.graphs-filters-end{
+.graphs-filters-end {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -552,5 +552,94 @@ border-radius: 4px;
   }
   .graphboxanalytics {
     border-radius: 6px;
+  }
+}
+
+/* profile page */
+
+.profile-details-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 66.81%;
+  height: 181px;
+  margin-left: 25%;
+  margin-top: 2%;
+  background: #ffffff;
+  border-radius: 13px;
+}
+.profile-image-box {
+  width: 100px;
+  height: 100px;
+  background: #c4c4c4;
+  border-radius: 4px;
+}
+.profile-details-half {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-page-container-second {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2%;
+  margin-left: 18%;
+}
+.personal-details {
+  width: 30.25%;
+  height: 379px;
+  background: #ffffff;
+  border-radius: 13px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+}
+.heading-first {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.shop-details {
+  width: 508px;
+  height: 379px;
+  background: #ffffff;
+  border-radius: 13px;
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 800px) {
+  .profile-details-box {
+    margin-left: 5%;
+    margin-top: 2%;
+    width: 90%;
+    justify-content: flex-start;
+  }
+
+  .profile-image-box {
+    margin: 5%;
+  }
+  .profile-details-half {
+    display: none;
+  }
+  .profile-page-container-second {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+  }
+  .personal-details {
+    width: 100%;
+    margin-left: 0%;
+  }
+  .shop-details {
+    margin-top: 5%;
+
+    width: 100%;
   }
 }
